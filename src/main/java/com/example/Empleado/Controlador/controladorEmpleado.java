@@ -16,4 +16,10 @@ public class controladorEmpleado {
     @GetMapping("/listarEmpleados")
     public ArrayList<Empleado> listar(){return servicio.listar();}
 
+
+    @DeleteMapping("/eliminarEmpleado/{cargo}")
+    public String eliminarEmpleado(@PathVariable("cargo") String cargo){
+        return Empleado.eliminarEmpleado(cargo);
+    }
+
 }
