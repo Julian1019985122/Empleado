@@ -1,7 +1,6 @@
 package com.example.Empleado.Controlador;
 import com.example.Empleado.Empleado.Empleado;
 import org.springframework.web.bind.annotation.*;
-import com.example.Empleado.Controlador.controladorEmpleado;
 import com.example.Empleado.Servicios.servicioEmpleado;
 
 import java.util.ArrayList;
@@ -19,7 +18,7 @@ public class controladorEmpleado {
 
     @DeleteMapping("/eliminarEmpleado/{cargo}")
     public String eliminarEmpleado(@PathVariable("cargo") String cargo){
-        return Empleado.eliminarEmpleado(cargo);
+        return servicio.eliminarEmpleado(cargo);
     }
 
 }
